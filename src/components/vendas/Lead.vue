@@ -34,23 +34,13 @@
 </template>
 
 <script>
+import ApiMixin from "@/mixins/ApiMixin";
 export default {
   name: "Lead",
-  data: () => ({
-    dados: null,
-  }),
-  methods: {
-    getDadosApi() {
-      const id = this.$route.params.id;
-      fetch(`http://localhost:3000/leads/${id}`)
-        .then((response) => response.json())
-        .then((response) => {
-          this.dados = response;
-        });
-    },
-  },
+  mixins: [ApiMixin],
   created() {
-    this.getDadosApi();
+    const id = this.$route.params.id;
+    this.getDadosApi(`http://localhost:3000/leads/${id}`);
   },
 };
 </script>
