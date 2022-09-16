@@ -24,6 +24,7 @@ const routes = [
   },
   {
     path: "/home", //localhost:8080/home
+    alias: "/app",
     component: Home,
     children: [
       {
@@ -41,6 +42,7 @@ const routes = [
           },
           {
             path: "leads/:id",
+            alias: ["/l/:id", "/pessoa/:id", "/:id"],
             component: Lead, //localhost:8080/home/vendas/leads/5
             name: "lead",
           },
@@ -58,6 +60,7 @@ const routes = [
         children: [
           {
             path: ":id", //localhost:8080/home/servicos/5
+            alias: "/s/:id",
             components: {
               default: Servico,
               indicadores: Indicadores,
