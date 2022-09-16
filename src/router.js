@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 
 import Contratos from "@/components/vendas/Contratos.vue";
+import Dashboard from "@/components/dashboard/Dashboard.vue";
 import Home from "@/views/Home.vue";
 import Leads from "@/components/vendas/Leads.vue";
 import Login from "@/views/Login.vue";
@@ -36,6 +37,10 @@ const routes = [
       {
         path: "servicos", //localhost:8080/home/servicos
         component: Servicos,
+      },
+      {
+        path: "dashboard", //localhost:8080/home/servicos
+        component: Dashboard,
       },
     ],
   },
