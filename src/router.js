@@ -33,6 +33,7 @@ const routes = [
           {
             path: "leads",
             component: Leads, //localhost:8080/home/vendas/leads
+            name: "leads",
           },
           {
             path: "leads/:id",
