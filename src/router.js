@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 
 import Contratos from "@/components/vendas/Contratos.vue";
 import Dashboard from "@/components/dashboard/Dashboard.vue";
+import DashboardRodape from "@/components/dashboard/DashboardRodape.vue";
 import Home from "@/views/Home.vue";
 import Indicadores from "@/components/servicos/Indicadores.vue";
 import Lead from "@/components/vendas/Lead.vue";
@@ -68,7 +69,10 @@ const routes = [
       },
       {
         path: "dashboard", //localhost:8080/home/servicos
-        component: Dashboard,
+        components: {
+          default: Dashboard,
+          rodape: DashboardRodape,
+        },
       },
     ],
   },
