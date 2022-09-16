@@ -13,16 +13,28 @@ export default {
   name: "Servico",
   mixins: [ApiMixin],
   created() {
+    // console.log("Componente serviço criado");
     const id = this.$route.params.id;
     this.getDadosApi(`http://localhost:3000/servicos/${id}`);
   },
-  watch: {
-    $route(to) {
-      // convenção: to = novoValor, from = valorAntigo
-      if (to.params.id != undefined)
-        this.getDadosApi(`http://localhost:3000/servicos/${to.params.id}`);
-    },
+  beforeRouteUpdate(to, from, next) {
+    // to = $route para onde estamos indo
+    // from = $route de onde estamos vindo
+    // next = faz com que o fluxo de navegação siga em frente
+
+    // console.log(to.params.id);
+    // console.log(from.params.id);
+    if (to.params.id != undefined)
+      this.getDadosApi(`http://localhost:3000/servicos/${to.params.id}`);
+    next();
   },
+  //   watch: {
+  //     $route(to) {
+  //       // convenção: to = novoValor, from = valorAntigo
+  //       if (to.params.id != undefined)
+  //         this.getDadosApi(`http://localhost:3000/servicos/${to.params.id}`);
+  //     },
+  //   },
 };
 </script>
   
