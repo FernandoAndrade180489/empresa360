@@ -1,5 +1,9 @@
 <template>
-  <h5>Vendas</h5>
+  <div>
+    <h5>Vendas</h5>
+    <hr />
+    <router-view></router-view>
+  </div>
 </template>
 
 <script>
