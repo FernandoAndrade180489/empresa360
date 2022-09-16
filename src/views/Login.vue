@@ -24,7 +24,7 @@
             <div class="mb-3">
               <input type="password" class="form-control" placeholder="Senha" />
             </div>
-            <button class="btn btn-primary">Login</button>
+            <button class="btn btn-primary" @click="navegarPara">Login</button>
           </div>
         </div>
       </div>
@@ -35,6 +35,16 @@
 <script>
 export default {
   name: "Login",
+  methods: {
+    navegarPara() {
+      // console.log(this.$router) // objeto de roteamento
+
+      // this.$router.push("/home");
+      // this.$router.push({ path: "/home" });
+      
+      this.$router.replace({ path: "/home" });
+    },
+  },
 };
 </script>
 
