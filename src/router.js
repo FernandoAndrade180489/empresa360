@@ -34,6 +34,7 @@ const routes = [
           {
             path: "", //localhost:8080/home/vendas - componente padrão
             component: VendasPadrao,
+            name: "vendas",
           },
           {
             path: "leads",
@@ -82,6 +83,32 @@ const routes = [
   {
     path: "/Login",
     component: Login,
+  },
+  {
+    path: "/redirecionamento-1",
+    redirect: "/home/servicos",
+  },
+  {
+    path: "/redirecionamento-2",
+    redirect: { name: "leads" },
+  },
+  {
+    path: "/redirecionamento-3",
+    redirect: "/home/vendas",
+  },
+  {
+    path: "/redirecionamento-4",
+    redirect: { name: "vendas" },
+  },
+  {
+    path: "/redirecionamento-5",
+    redirect: (to) => {
+      // programar algo antes do redirecionamento ser efetivado
+      console.log(to);
+
+      // return '/home/vendas'
+      return { name: "vendas" };
+    },
   },
 ];
 
