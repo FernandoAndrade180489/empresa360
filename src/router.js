@@ -41,12 +41,14 @@ const routes = [
           {
             path: "contratos",
             component: Contratos, //localhost:8080/home/vendas/contratos
+            name: "contratos",
           },
         ],
       },
       {
         path: "servicos", //localhost:8080/home/servicos
         component: Servicos,
+        name: "servicos",
       },
       {
         path: "dashboard", //localhost:8080/home/servicos

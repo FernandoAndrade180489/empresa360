@@ -39,7 +39,7 @@
         </router-link>
         <router-link
           class="list-group-item list-group-item-action"
-          to="/home/vendas/contratos"
+          :to="{ name: 'contratos' }"
           exact-active-class="active"
         >
           <i class="bi bi-caret-right"></i> Contratos
@@ -47,7 +47,7 @@
 
         <router-link
           class="list-group-item list-group-item-action"
-          to="/home/servicos"
+          :to="{ name: 'servicos' }"
           exact-active-class="active"
         >
           <i class="bi bi-card-checklist"></i> Serviços
