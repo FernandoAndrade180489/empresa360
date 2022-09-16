@@ -1,10 +1,28 @@
 <template>
-  <h5>Serviços</h5>
+  <div>
+    <h5>Serviços</h5>
+    <hr />
+    <div class="row">
+      <div class="col" v-for="d in dados" :key="d.id">
+        <div class="card" style="width: 11rem">
+          <img :src="`/img/${d.icone}`" alt="" class="card-img-top" />
+          <div class="card-body text-center">
+            <p class="card-text">{{ d.servico }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
+import ApiMixin from "@/mixins/ApiMixin";
 export default {
   name: "Servicos",
+  mixins: [ApiMixin],
+  created() {
+    this.getDadosApi("http://localhost:3000/servicos");
+  },
 };
 </script>
 
