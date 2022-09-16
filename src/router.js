@@ -9,6 +9,7 @@ import Login from "@/views/Login.vue";
 import Servicos from "@/components/servicos/Servicos.vue";
 import Site from "@/views/Site.vue";
 import Vendas from "@/components/vendas/Vendas.vue";
+import VendasPadrao from "@/components/vendas/VendasPadrao.vue";
 
 // createWebHashHistory
 
@@ -25,6 +26,10 @@ const routes = [
         path: "vendas", //localhost:8080/home/vendas
         component: Vendas,
         children: [
+          {
+            path: "", //localhost:8080/home/vendas - componente padrão
+            component: VendasPadrao,
+          },
           {
             path: "leads",
             component: Leads, //localhost:8080/home/vendas/leads
