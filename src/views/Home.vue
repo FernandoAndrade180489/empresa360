@@ -40,7 +40,7 @@
 
         <router-link
           class="list-group-item list-group-item-action"
-          to="/home/servicos/contratos"
+          to="/home/servicos"
         >
           <i class="bi bi-card-checklist"></i> Serviços
         </router-link>
@@ -82,5 +82,15 @@ export default {
 .list-group-item {
   border-top: none;
   border-right: none;
+}
+/* .router-link-active {
+  color: #fff;
+  background-color: #65a1fa;
+  border-color: #65a1fa;
+} */
+.router-link-exact-active {
+  color: #fff;
+  background-color: #0d6efd;
+  border-color: #0d6efd;
 }
 </style>
