@@ -19,7 +19,8 @@ export default {
   watch: {
     $route(to) {
       // convenção: to = novoValor, from = valorAntigo
-      this.getDadosApi(`http://localhost:3000/servicos/${to.params.id}`);
+      if (to.params.id != undefined)
+        this.getDadosApi(`http://localhost:3000/servicos/${to.params.id}`);
     },
   },
 };
