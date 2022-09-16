@@ -39,10 +39,17 @@ export default {
     navegarPara() {
       // console.log(this.$router) // objeto de roteamento
 
-      // this.$router.push("/home");
+      // Autenticar aqui antes de fazer o push da Rota
+
+      this.$router.push("/home");
       // this.$router.push({ path: "/home" });
-      
-      this.$router.replace({ path: "/home" });
+
+      // this.$router.replace({ path: "/home" });
+
+      // this.$router.forward(); // avançar no histórico de rotas do navegador
+      // this.$router.back(); // permite retornar no histórico de rotas do navegador
+
+      // this.$router.go(2); // avançar ou retornar no histórico de rotas do navegador - valores negativos volta
     },
   },
 };
