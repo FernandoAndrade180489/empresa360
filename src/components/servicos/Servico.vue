@@ -16,6 +16,12 @@ export default {
     const id = this.$route.params.id;
     this.getDadosApi(`http://localhost:3000/servicos/${id}`);
   },
+  watch: {
+    $route(to) {
+      // convenção: to = novoValor, from = valorAntigo
+      this.getDadosApi(`http://localhost:3000/servicos/${to.params.id}`);
+    },
+  },
 };
 </script>
   

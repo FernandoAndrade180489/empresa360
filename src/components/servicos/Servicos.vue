@@ -7,7 +7,9 @@
         <div class="card" style="width: 11rem">
           <img :src="`/img/${d.icone}`" alt="" class="card-img-top" />
           <div class="card-body text-center">
-            <p class="card-text">{{ d.servico }}</p>
+            <router-link :to="{ name: 'servico', params: { id: d.id } }">
+              <p class="card-text">{{ d.servico }}</p>
+            </router-link>
           </div>
         </div>
       </div>
@@ -23,6 +25,7 @@ export default {
   name: "Servicos",
   mixins: [ApiMixin],
   created() {
+    console.log("Componente serviço criado");
     this.getDadosApi("http://localhost:3000/servicos");
   },
 };
