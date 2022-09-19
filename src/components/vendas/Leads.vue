@@ -50,6 +50,9 @@ export default {
   beforeRouteEnter() {
     console.log("Guarda de componente beforeRouteEnter");
   },
+  beforeRouteLeave() { // to, from, next
+    console.log("Guarda de componente beforeRouteLeave");
+  },
 };
 </script>
 
