@@ -1,8 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router";
 
-import Contratos from "@/components/vendas/Contratos.vue";
-import Dashboard from "@/components/dashboard/Dashboard.vue";
-import DashboardRodape from "@/components/dashboard/DashboardRodape.vue";
+// import Contratos from "@/components/vendas/Contratos.vue";
+// import Dashboard from "@/components/dashboard/Dashboard.vue";
+// import DashboardRodape from "@/components/dashboard/DashboardRodape.vue";
 import Home from "@/views/Home.vue";
 import Indicadores from "@/components/servicos/Indicadores.vue";
 import Lead from "@/components/vendas/Lead.vue";
@@ -16,6 +16,11 @@ import Site from "@/views/Site.vue";
 import Vendas from "@/components/vendas/Vendas.vue";
 import VendasPadrao from "@/components/vendas/VendasPadrao.vue";
 
+// lazy loading
+const Contratos = () => import("@/components/vendas/Contratos.vue");
+const Dashboard = () => import("@/components/dashboard/Dashboard.vue");
+const DashboardRodape = () =>
+  import("@/components/dashboard/DashboardRodape.vue");
 // createWebHashHistory
 
 const routes = [
