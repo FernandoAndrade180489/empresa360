@@ -43,6 +43,11 @@ const routes = [
             path: "leads",
             component: Leads, //localhost:8080/home/vendas/leads
             name: "leads",
+            // beforeEnter: (to, from) => {
+            beforeEnter: () => {
+              // verificar se o usuário tem e permissão de carregar a rota
+              console.log("Guarda de rota beforeEnter");
+            },
           },
           {
             path: "leads/:id/:outroParametro",
@@ -156,19 +161,14 @@ const router = createRouter({
   routes, //routes: routes,
 });
 
-router.beforeEach((to) => {
-  console.log("Origem", to.meta);
-
-  if (to.meta.requerAutorizacao) {
-    console.log("Validar o acesso");
-  } else {
-    console.log("Seguir navegação");
-  }
+// router.beforeEach((to) => {
+router.beforeEach(() => {
+  console.log("Guarda global beforeEach");
 });
 
-router.afterEach((to, from) => {
-  console.log("Guarda de rota executada após a conclusão da navegação");
-  console.log(from, to);
+// router.afterEach((to, from) => {
+router.afterEach(() => {
+  console.log("Guarda global afterEach");
 });
 
 export default router;
