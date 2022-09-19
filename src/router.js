@@ -43,8 +43,13 @@ const routes = [
             name: "leads",
           },
           {
-            path: "leads/:id",
-            alias: ["/l/:id", "/pessoa/:id", "/:id"],
+            path: "leads/:id/:outroParametro",
+            props: true,
+            alias: [
+              "/l/:id/:outroParametro",
+              "/pessoa/:id/:outroParametro",
+              "/:id/:outroParametro",
+            ],
             component: Lead, //localhost:8080/home/vendas/leads/5
             name: "lead",
           },
