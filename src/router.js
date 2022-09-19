@@ -3,24 +3,35 @@ import { createRouter, createWebHistory } from "vue-router";
 // import Contratos from "@/components/vendas/Contratos.vue";
 // import Dashboard from "@/components/dashboard/Dashboard.vue";
 // import DashboardRodape from "@/components/dashboard/DashboardRodape.vue";
-import Home from "@/views/Home.vue";
-import Indicadores from "@/components/servicos/Indicadores.vue";
-import Lead from "@/components/vendas/Lead.vue";
-import Leads from "@/components/vendas/Leads.vue";
-import Login from "@/views/Login.vue";
-import Opcoes from "@/components/servicos/Opcoes.vue";
-import PaginaNaoEncontrada from "@/views/PaginaNaoEncontrada.vue";
-import Servico from "@/components/servicos/Servico.vue";
-import Servicos from "@/components/servicos/Servicos.vue";
-import Site from "@/views/Site.vue";
-import Vendas from "@/components/vendas/Vendas.vue";
-import VendasPadrao from "@/components/vendas/VendasPadrao.vue";
+// import Home from "@/views/Home.vue";
+// import Indicadores from "@/components/servicos/Indicadores.vue";
+// import Lead from "@/components/vendas/Lead.vue";
+// import Leads from "@/components/vendas/Leads.vue";
+// import Login from "@/views/Login.vue";
+// import Opcoes from "@/components/servicos/Opcoes.vue";
+// import PaginaNaoEncontrada from "@/views/PaginaNaoEncontrada.vue";
+// import Servico from "@/components/servicos/Servico.vue";
+// import Servicos from "@/components/servicos/Servicos.vue";
+// import Site from "@/views/Site.vue";
+// import Vendas from "@/components/vendas/Vendas.vue";
+// import VendasPadrao from "@/components/vendas/VendasPadrao.vue";
 
 // lazy loading
-const Contratos = () => import("@/components/vendas/Contratos.vue");
-const Dashboard = () => import("@/components/dashboard/Dashboard.vue");
-const DashboardRodape = () =>
-  import("@/components/dashboard/DashboardRodape.vue");
+const Contratos = () => import(/*webpackChunkName: "vendas"*/ "@/components/vendas/Contratos.vue");
+const Dashboard = () => import(/*webpackChunkName: "dashboard"*/ "@/components/dashboard/Dashboard.vue");
+const DashboardRodape = () => import(/*webpackChunkName: "dashboard"*/ "@/components/dashboard/DashboardRodape.vue");
+const Home = () => import("@/views/Home.vue");
+const Indicadores = () => import(/*webpackChunkName: "servicos"*/ "@/components/servicos/Indicadores.vue");
+const Lead = () => import(/*webpackChunkName: "vendas"*/ "@/components/vendas/Lead.vue");
+const Leads = () => import(/*webpackChunkName: "vendas"*/ "@/components/vendas/Leads.vue");
+const Login = () => import("@/views/Login.vue");
+const Opcoes = () => import(/*webpackChunkName: "servicos"*/ "@/components/servicos/Opcoes.vue");
+const PaginaNaoEncontrada = () => import("@/views/PaginaNaoEncontrada.vue");
+const Servico = () => import(/*webpackChunkName: "servicos"*/ "@/components/servicos/Servico.vue");
+const Servicos = () => import(/*webpackChunkName: "servicos"*/ "@/components/servicos/Servicos.vue");
+const Site = () => import("@/views/Site.vue");
+const Vendas = () => import(/*webpackChunkName: "vendas"*/ "@/components/vendas/Vendas.vue");
+const VendasPadrao = () => import(/*webpackChunkName: "vendas"*/ "@/components/vendas/VendasPadrao.vue");
 // createWebHashHistory
 
 const routes = [
