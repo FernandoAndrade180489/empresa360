@@ -166,4 +166,9 @@ router.beforeEach((to) => {
   }
 });
 
+router.afterEach((to, from) => {
+  console.log("Guarda de rota executada após a conclusão da navegação");
+  console.log(from, to);
+});
+
 export default router;
