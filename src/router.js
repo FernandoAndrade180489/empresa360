@@ -67,6 +67,11 @@ const routes = [
         children: [
           {
             path: ":id", //localhost:8080/home/servicos/5
+            props: {
+              default: true,
+              indicadores: true,
+              opcoes: true,
+            },
             alias: "/s/:id",
             components: {
               default: Servico,

@@ -1,9 +1,19 @@
 <template>
-  <h5>Componente Opcoes</h5>
+  <div>
+    <h5>Componente Opções</h5>
+    <p>Poderiamos recuperar as opções do serviço id {{ id }}</p>
+  </div>
 </template>
 
 <script>
-export default {};
+export default {
+  name: "Opcoes",
+  props: ["id"],
+  created() {
+    // console.log("Opcoes", this.$route.params.id);
+    // console.log("Via Props - Opções", this.id);
+  },
+};
 </script>
 
 <style>
