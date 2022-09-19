@@ -44,10 +44,24 @@ const routes = [
           },
           {
             path: "leads/:id/:outroParametro",
-            props: {
-              id: 4,
-              outroParametro: "pt-br",
-            },
+            props: true,
+            // props: {
+            //   id: 4,
+            //   outroParametro: "pt-br",
+            // },
+            // props: (route) => {
+            //   console.log("Rota Ativa", route);
+
+            //   let teste = route.query.idioma
+            //     ? route.query.idioma
+            //     : route.params.outroParametro;
+
+            //   // implementando uma lógica para definir as props que serão submetidas para o componente roteado
+            //   return {
+            //     id: parseInt(route.params.id) + 1,
+            //     outroParametro: teste,
+            //   };
+            // },
             alias: [
               "/l/:id/:outroParametro",
               "/pessoa/:id/:outroParametro",
