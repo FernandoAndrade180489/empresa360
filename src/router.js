@@ -158,8 +158,16 @@ const routes = [
 
 const router = createRouter({
   history: createWebHistory(),
-  scrollBehavior() {
-    return { left: 0, top: 150 }; // left = x; top = y
+  scrollBehavior(to) {
+    // return { left: 0, top: 150 }; // left = x; top = y
+    console.log(to.hash);
+
+    if (to.hash) {
+      return { el: to.hash };
+      // fragmento = #secao_1 => id = secao_1
+    }
+
+    return { left: 0, top: 0 };
   },
   routes, //routes: routes,
 });
