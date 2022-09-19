@@ -13,6 +13,10 @@ export default {
     // console.log("Opcoes", this.$route.params.id);
     // console.log("Via Props - Opções", this.id);
   },
+  beforeRouteUpdate() {
+    // to, from, next
+    console.log("Guarda de componente beforeRouteUpdate");
+  },
 };
 </script>
 
