@@ -48,6 +48,7 @@ export default {
   mixins: [ApiMixin],
   created() {
     // const id = this.$route.params.id;
+    console.log(this.$props);
     this.getDadosApi(`http://localhost:3000/leads/${this.id}`);
   },
 };

@@ -44,7 +44,10 @@ const routes = [
           },
           {
             path: "leads/:id/:outroParametro",
-            props: true,
+            props: {
+              id: 4,
+              outroParametro: "pt-br",
+            },
             alias: [
               "/l/:id/:outroParametro",
               "/pessoa/:id/:outroParametro",
